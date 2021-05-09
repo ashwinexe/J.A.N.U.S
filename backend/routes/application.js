@@ -46,4 +46,18 @@ router.post('/', (req, res, next) => {
   });
 })
 
+
+router.delete('/:id', (req, res, next) => {
+  const id = req.params.id;
+  connection.then(async (conn) => {
+    try {
+      const result = await conn.getRepository('applications').delete(id);
+
+      res.send(result);
+    } catch(exception) {
+      next(exception);
+    }
+  });
+})
+
 module.exports = router;
