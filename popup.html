@@ -6,37 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Tracker</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/styles.css"> 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-<style>
-    body {
-        /* font-family: 'Montserrat', sans-serif; */
-        font-size: 14px;
-        margin: 0;
-        min-height: 180px;
-        padding: 0;
-        width: 384px;
-    }
-
-</style>
 </head>
 <body>
     <div class="modal-header">
-            <h1 class="logo">
-                <img src="images/logo.png" alt="logo-icon" class="logo-icon"> JANUS
-                <span class="version">(1.0.0)</span>
-            </h1>
-            <button class="btn btn-outline-dark" onclick="show_settings()"><i class="fa fa-cog fa-2x"></i></button>
+            <h2 class="logo">
+                <img src="images/logo.png" alt="logo-icon" class="logo-icon">Janus
+            </h2>
+            <button class="btn btn-outline-light" id="cog"><i class="fa fa-cog fa-2x"></i></button>
     </div>
     
     <!-- settings page -->
-    <div class="row settings_page" id="settings_page">
-        <button class="btn btn-outline-secondary column"><i class="fa fa-arrow-left"></i></button>
-        <h3 class="column">Settings</h3>
-        <div class="row"></div>
+    <div class="settings_page" id="settings_page" style="display: none;">
+        <div class="row">
+            <button class="btn btn-outline-light custom_column" style="width: 10px;" id="back"><i class="fa fa-arrow-left"></i></button>
+            <div class="custom_column" style="flex-grow:5;">Settings</div>
+        </div>
+
+        <div class="custom_row">My Roles</div>
+        <div class="custom_row"><input type="text" class="form-control" placeholder="Software Engineer"></div>
+        <div class="custom_row">E-mail</div>
+        <div class="custom_row"><input type="text" class="form-control" placeholder="abc@gmail.com"></div>
+        <div class="custom_row">Notification Frequency</div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="selection" id="weekly">
+            <label class="form-check-label" for="weekly">
+              Weekly
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="selection" id="fortnightly" checked>
+            <label class="form-check-label" for="fortnightly">
+              Fortnightly
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="selection" id="monthly" checked>
+            <label class="form-check-label" for="monthly">
+              Monthly
+            </label>
+          </div>
     </div>
 
     <!-- index page -->
@@ -46,7 +58,7 @@
 </div>
 
     <div class="button">
-        <button type="button" class="btn btn-outline-info">View Application</button>
+        <button type="button" class="btn btn-outline-info">View Applications</button>
     </div>
 
     <div class="button">
@@ -54,6 +66,6 @@
 </div>
 </section>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

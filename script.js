@@ -1,20 +1,20 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    document.getElementById('cog').addEventListener("click", show_settings);
+    document.getElementById('back').addEventListener("click", hide_settings);
+})
+
+
 var a;
 
 function show_settings() {
-    if(a==1){
-        document.getElementById("settings_page").style.display="inline";
+        document.getElementById("settings_page").style.display="block";
         document.getElementById("index").style.display="none";
-        return a =0;
-    }
-    
-    else
-    {
-        document.getElementById("settings_page").style.display="none";
-        document.getElementById("index").style.display="inline";
-        return a = 1;
-    }
 }
 
-window.onload = function () {
-    document.getElementById("button").onclick = show_settings();
+function hide_settings() {
+    document.getElementById("index").style.display="inline";
+    document.getElementById("settings_page").style.display="none";
+
 }
