@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('cog').addEventListener("click", show_settings);
@@ -9,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 var a;
 
 function show_settings() {
-        document.getElementById("settings_page").style.display="block";
-        document.getElementById("index").style.display="none";
+    document.getElementById("email").value = localStorage.getItem("janus-email");
+    document.getElementById("settings_page").style.display="block";
+    document.getElementById("index").style.display="none";
 }
 
 function hide_settings() {
@@ -18,3 +18,9 @@ function hide_settings() {
     document.getElementById("settings_page").style.display="none";
 
 }
+
+function saveEmail() {
+    localStorage.setItem("janus-email", document.getElementById("email").value);
+}
+
+document.getElementById("saveEmail").addEventListener("click", saveEmail);
