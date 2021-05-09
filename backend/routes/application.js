@@ -28,6 +28,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', (req, res, next) => {
+  console.log(req);
   const { title, company, location, link, status, email } = req.body;
   const appDetails = {
     title,
