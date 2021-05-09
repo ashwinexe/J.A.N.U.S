@@ -1,11 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    
+    document.getElementById('cog').addEventListener("click", show_settings);
+    document.getElementById('back').addEventListener("click", hide_settings);
 })
 
-document.getElementById('cog').addEventListener("click", show_settings);
-document.getElementById('back').addEventListener("click", hide_settings);
 
 var a;
 
