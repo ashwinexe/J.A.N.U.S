@@ -29,47 +29,31 @@
                 <img src="images/logo.png" alt="logo-icon" class="logo-icon"> JANUS
                 <span class="version">(1.0.0)</span>
             </h1>
+            <button class="btn btn-outline-dark" onclick="show_settings()"><i class="fa fa-cog fa-2x"></i></button>
     </div>
-    <div class="modal-content">
+    
+    <!-- settings page -->
+    <div class="row settings_page" id="settings_page">
+        <button class="btn btn-outline-secondary column"><i class="fa fa-arrow-left"></i></button>
+        <h3 class="column">Settings</h3>
+        <div class="row"></div>
+    </div>
+
+    <!-- index page -->
+<section id="index">
+<div class="modal-content">
         <p>Easily access your job applications</p>
-    </div>
-    <!-- <div class="modal-icons">
-        <div class="flex-container">
-            <div class="flex">
-                <a href="https://www.linkedin.com" target="_blank">
-                <i class="fa fa-globe"></i>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.youtube.com" target="_blank">
-                <i class="fa fa-youtube"></i>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.github.com" target="_blank">
-                <i class="fa fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </div> -->
+</div>
+
     <div class="button">
         <button type="button" class="btn btn-outline-info">View Application</button>
     </div>
+
     <div class="button">
     <button type="button" class="btn btn-outline-success">Track Application</button>
 </div>
+</section>
 
-
-    <script src="popup.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

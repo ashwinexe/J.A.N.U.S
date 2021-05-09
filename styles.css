@@ -20,10 +20,12 @@
     .modal-header {
         align-items: center;
         border-bottom: 0.5px solid #dadada;
+        margin-left: 50px;
     }
 
     .modal-content {
         padding:0 22px;
+        align-items: center;
     }
 
     .modal-icons {
@@ -43,7 +45,6 @@
      .version {
          color: #444;
          font-size: 18px;
-         padding: 10px 22px;
      }
 
      .flex {
@@ -71,3 +72,26 @@
          justify-content: center;
          padding: 10px;
      }
+
+     .settings_page {
+         display: none;
+         padding: 10px;
+         color: darkblue;
+         width: 385px;
+         /* height: 200px; */
+     }
+
+     .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        flex: 1;
+        padding: 15px;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+    }
