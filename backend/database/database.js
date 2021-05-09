@@ -1,8 +1,10 @@
 const fs = require("fs");
-const { Pool } = require("pg");
+const {createConnection, EntitySchema} = require('typeorm');
 
 const config = {
-    user: process.env.DBUSER,
+    type: 'cockroachdb',
+    synchronize: true,
+    username: process.env.DBUSER,
     password: process.env.DBPASSWORD,
     host: process.env.DBHOST,
     database: process.env.DBNAME,
@@ -10,7 +12,11 @@ const config = {
     ssl: {
         ca: fs.readFileSync(__dirname+'/certs/ca.crt')
             .toString()
-    }
+    },
+    // logging: true,
+    // logger: 'simple-console',
+    entities: [new EntitySchema(require('./schema.json'))]
 };
+const connection = createConnection(config);
 
-module.exports = new Pool(config);
+module.exports = connection;
