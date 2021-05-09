@@ -55,18 +55,30 @@ request (options , (error, resp, html)=> {
 		const $ = cheerio.load(html);
 
 		const title = $('.e11nt52q6');
-		console.log(title.text());
+		const jobTitle = title.text();
+		// alert("title "+jobTitle);
 
 		const location = $('div .e11nt52q2');
-		console.log(location.html());
+		const jobLocation = location.html();
+		// alert("location "+jobLocation);
 
 		const company = $('div .e11nt52q1');
-		console.log(company.text().replace(/[^a-zA-Z]/g, ''));
+		const companyName = company.text().replace(/[^a-zA-Z]/g, '');
+		// alert("company "+companyName);
+
+		saveToDatabase({
+			title: jobTitle,
+			company: companyName,
+			location: jobLocation,
+			link: url, 
+			status: 'Applied',
+			email: localStorage.getItem("janus-email"),
+		})
 
 	}
 
 	else {
-		console.log(error, resp.statusCode);
+		console.error(error, resp.statusCode);
 	}
 });
 
@@ -78,4 +90,21 @@ else {
 
 });
 
+}
+
+function saveToDatabase(data) {
+	fetch("https://janus-dot-hackathon-313211.uc.r.appspot.com/applications/", {
+		method: "POST",
+		headers: {
+			'Accept': 'application/json, text/plain, */*',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(data)
+	}).then(function(res){ 
+		// alert(JSON.stringify( res ) ) 
+	})
+	// .then(function(resultdata){ alert( JSON.stringify( resultdata ) ) })
+	.catch(function(err){
+		 alert("error "+err) 
+	});
 }

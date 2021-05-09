@@ -23544,7 +23544,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz",
   "_shasum": "da37cebd31e79a1367e941b592ed1fbebd58abbb",
   "_spec": "elliptic@^6.5.3",
-  "_where": "C:\\Users\\prince\\AppData\\Roaming\\npm\\node_modules\\browserify\\node_modules\\browserify-sign",
+  "_where": "C:\\Users\\avina\\AppData\\Roaming\\npm\\node_modules\\browserify\\node_modules\\browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -46075,8 +46075,8 @@ function _setExports(ndebug) {
 
 module.exports = _setExports(process.env.NODE_NDEBUG);
 
-}).call(this)}).call(this,{"isBuffer":require("C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"_process":187,"assert":18,"stream":212,"util":253}],306:[function(require,module,exports){
+}).call(this)}).call(this,{"isBuffer":require("../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
+},{"../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"_process":187,"assert":18,"stream":212,"util":253}],306:[function(require,module,exports){
 
 /*!
  *  Copyright 2010 LearnBoost <dev@learnboost.com>
@@ -51360,8 +51360,8 @@ CombinedStream.prototype._emitError = function(err) {
   this.emit('error', err);
 };
 
-}).call(this)}).call(this,{"isBuffer":require("C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"delayed-stream":346,"stream":212,"util":253}],331:[function(require,module,exports){
+}).call(this)}).call(this,{"isBuffer":require("../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"delayed-stream":346,"stream":212,"util":253}],331:[function(require,module,exports){
 (function (Buffer){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -51471,8 +51471,8 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-}).call(this)}).call(this,{"isBuffer":require("C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155}],332:[function(require,module,exports){
+}).call(this)}).call(this,{"isBuffer":require("../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155}],332:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.attributeRules = void 0;
@@ -59596,8 +59596,8 @@ module.exports = {
 
 };
 
-}).call(this)}).call(this,{"isBuffer":require("C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"./utils":404,"C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"assert-plus":305,"crypto":83,"http":227,"jsprim":412,"sshpk":487,"util":253}],404:[function(require,module,exports){
+}).call(this)}).call(this,{"isBuffer":require("../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"./utils":404,"assert-plus":305,"crypto":83,"http":227,"jsprim":412,"sshpk":487,"util":253}],404:[function(require,module,exports){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = require('assert-plus');
@@ -97975,8 +97975,8 @@ Key._oldVersionDetect = function (obj) {
 	return ([1, 0]);
 };
 
-}).call(this)}).call(this,{"isBuffer":require("C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"./algs":468,"./dhe":470,"./ed-compat":471,"./errors":472,"./fingerprint":473,"./formats/auto":474,"./formats/dnssec":475,"./formats/pem":477,"./formats/pkcs1":478,"./formats/pkcs8":479,"./formats/putty":480,"./formats/rfc4253":481,"./formats/ssh":483,"./formats/ssh-private":482,"./private-key":489,"./signature":490,"./utils":492,"C:/Users/prince/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"assert-plus":305,"crypto":83}],489:[function(require,module,exports){
+}).call(this)}).call(this,{"isBuffer":require("../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":155,"./algs":468,"./dhe":470,"./ed-compat":471,"./errors":472,"./fingerprint":473,"./formats/auto":474,"./formats/dnssec":475,"./formats/pem":477,"./formats/pkcs1":478,"./formats/pkcs8":479,"./formats/putty":480,"./formats/rfc4253":481,"./formats/ssh":483,"./formats/ssh-private":482,"./private-key":489,"./signature":490,"./utils":492,"assert-plus":305,"crypto":83}],489:[function(require,module,exports){
 // Copyright 2017 Joyent, Inc.
 
 module.exports = PrivateKey;
@@ -106001,18 +106001,29 @@ request (options , (error, resp, html)=> {
 		const $ = cheerio.load(html);
 
 		const title = $('.e11nt52q6');
-		console.log(title.text());
+		const jobTitle = title.text();
+		alert("title "+jobTitle);
 
 		const location = $('div .e11nt52q2');
-		console.log(location.html());
+		const jobLocation = location.html();
+		alert("location "+jobLocation);
 
 		const company = $('div .e11nt52q1');
-		console.log(company.text().replace(/[^a-zA-Z]/g, ''));
+		const companyName = company.text().replace(/[^a-zA-Z]/g, '');
+		alert("company "+companyName);
+		saveToDatabase({
+			title: jobTitle,
+			company: companyName,
+			location: jobLocation,
+			link: url, 
+			status: 'Applied',
+			email: localStorage.getItem("janus-email"),
+		})
 
 	}
 
 	else {
-		console.log(error, resp.statusCode);
+		alert(error, resp.statusCode);
 	}
 });
 
@@ -106024,5 +106035,19 @@ else {
 
 });
 
+}
+
+function saveToDatabase(data) {
+	alert(JSON.stringify( data ));
+	fetch("https://janus-dot-hackathon-313211.uc.r.appspot.com/applications/", {
+		method: "POST",
+		headers: {
+			'Accept': 'application/json, text/plain, */*',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(data)
+	}).then(function(res){ alert(JSON.stringify( res ) ) })
+	// .then(function(resultdata){ alert( JSON.stringify( resultdata ) ) })
+	.catch(function(err){ alert("error "+err) });
 }
 },{"cheerio":321,"request":453}]},{},[508]);
