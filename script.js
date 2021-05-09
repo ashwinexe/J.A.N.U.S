@@ -27,3 +27,9 @@ function show_preview() {
             document.getElementById("data_preview").style.display="block";
             document.getElementById("index").style.display="none";
 }
+
+function hide_preview() {
+    document.getElementById("data_preview").style.display="none";
+    document.getElementById("index").style.display="block";
+    document.getElementById("success-alert").style.display="block";
+}

@@ -56,21 +56,24 @@
 <section class="data_preview" id="data_preview" style="display: none;" >
 <div class="custom_row" style="justify-content: center; font-weight: 1000;">Here's What we gathered</div>
 <div class="custom_row" style="padding-left: 10px;">Job Title</div>
-<div class="custom_box">Software  Engineer</div>
+<input type="text" class="custom_box" id="job-title"/>
 
 <div class="custom_row" style="padding-left: 10px;">Company</div>
-<div class="custom_box">ABC</div>
+<input type="text" class="custom_box" id="company-name"/>
 
 <div class="custom_row" style="padding-left: 10px;">Location</div>
-<div class="custom_box">Cupertino</div>
+<input type="text" class="custom_box" id="job-location"/>
 <div class="button">
-  <button type="button" class="btn btn-outline-info" id="submit">Save Application</button>
+  <button type="button" class="btn btn-outline-info" id="saveApplication">Save Application</button>
 </div>
 
 </section>
 
     <!-- index page -->
 <section id="index">
+  <div class="alert alert-success" role="alert" id="success-alert" style="display: none;" >
+    Application saved
+  </div>
 <div class="modal-content">
         <p>Easily access your job applications</p>
 </div>
@@ -80,7 +83,7 @@
     </div>
 
     <div class="button">
-    <button class="btn btn-outline-success" id= "track">Track Application</button>
+    <button class="btn btn-outline-success" id= "tracker">Track Application</button>
 </div>
 </section>
 

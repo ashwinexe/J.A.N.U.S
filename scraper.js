@@ -65,15 +65,22 @@ request (options , (error, resp, html)=> {
 		const company = $('div .e11nt52q1');
 		const companyName = company.text().replace(/[^a-zA-Z]/g, '');
 		// alert("company "+companyName);
+		show_preview();
+		document.getElementById("job-title").value = jobTitle;
+		document.getElementById("company-name").value = companyName;
+		document.getElementById("job-location").value = jobLocation;
 
-		saveToDatabase({
-			title: jobTitle,
-			company: companyName,
-			location: jobLocation,
-			link: url, 
-			status: 'Applied',
-			email: localStorage.getItem("janus-email"),
-		})
+		document.getElementById("saveApplication").addEventListener("click", () => {
+			saveToDatabase({
+				title: jobTitle,
+				company: companyName,
+				location: jobLocation,
+				link: url, 
+				status: 'Applied',
+				email: localStorage.getItem("janus-email"),
+			});
+		});
+		
 
 	}
 
@@ -101,7 +108,10 @@ function saveToDatabase(data) {
 		},
 		body: JSON.stringify(data)
 	}).then(function(res){ 
-		// alert(JSON.stringify( res ) ) 
+		// alert(res.status);
+		if(res.status === 200) {
+			hide_preview();
+		}
 	})
 	// .then(function(resultdata){ alert( JSON.stringify( resultdata ) ) })
 	.catch(function(err){

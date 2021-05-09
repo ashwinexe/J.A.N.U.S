@@ -106002,28 +106002,36 @@ request (options , (error, resp, html)=> {
 
 		const title = $('.e11nt52q6');
 		const jobTitle = title.text();
-		alert("title "+jobTitle);
+		// alert("title "+jobTitle);
 
 		const location = $('div .e11nt52q2');
 		const jobLocation = location.html();
-		alert("location "+jobLocation);
+		// alert("location "+jobLocation);
 
 		const company = $('div .e11nt52q1');
 		const companyName = company.text().replace(/[^a-zA-Z]/g, '');
-		alert("company "+companyName);
-		saveToDatabase({
-			title: jobTitle,
-			company: companyName,
-			location: jobLocation,
-			link: url, 
-			status: 'Applied',
-			email: localStorage.getItem("janus-email"),
-		})
+		// alert("company "+companyName);
+		show_preview();
+		document.getElementById("job-title").value = jobTitle;
+		document.getElementById("company-name").value = companyName;
+		document.getElementById("job-location").value = jobLocation;
+
+		document.getElementById("saveApplication").addEventListener("click", () => {
+			saveToDatabase({
+				title: jobTitle,
+				company: companyName,
+				location: jobLocation,
+				link: url, 
+				status: 'Applied',
+				email: localStorage.getItem("janus-email"),
+			});
+		});
+		
 
 	}
 
 	else {
-		alert(error, resp.statusCode);
+		console.error(error, resp.statusCode);
 	}
 });
 
@@ -106038,7 +106046,6 @@ else {
 }
 
 function saveToDatabase(data) {
-	alert(JSON.stringify( data ));
 	fetch("https://janus-dot-hackathon-313211.uc.r.appspot.com/applications/", {
 		method: "POST",
 		headers: {
@@ -106046,8 +106053,15 @@ function saveToDatabase(data) {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(data)
-	}).then(function(res){ alert(JSON.stringify( res ) ) })
+	}).then(function(res){ 
+		// alert(res.status);
+		if(res.status === 200) {
+			hide_preview();
+		}
+	})
 	// .then(function(resultdata){ alert( JSON.stringify( resultdata ) ) })
-	.catch(function(err){ alert("error "+err) });
+	.catch(function(err){
+		 alert("error "+err) 
+	});
 }
 },{"cheerio":321,"request":453}]},{},[508]);
