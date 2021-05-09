@@ -2,10 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('cog').addEventListener("click", show_settings);
     document.getElementById('back').addEventListener("click", hide_settings);
+    document.getElementById('track').addEventListener("click", show_preview);
 })
-
-
-var a;
 
 function show_settings() {
     document.getElementById("email").value = localStorage.getItem("janus-email");
@@ -24,3 +22,8 @@ function saveEmail() {
 }
 
 document.getElementById("saveEmail").addEventListener("click", saveEmail);
+
+function show_preview() {
+            document.getElementById("data_preview").style.display="block";
+            document.getElementById("index").style.display="none";
+}
