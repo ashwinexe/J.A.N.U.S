@@ -17,7 +17,12 @@ module.exports = () => {
             console.log(result);
             // Send email follow ups 
             result.forEach(application => {
-                sendNotification(application.email);
+                const data = {
+                    company: application.company,
+                    title: application.title,
+                    days: Math.round((new Date().getTime() - new Date(application.creation_date).getTime()) / (1000 * 60 * 60 * 24)) // Difference in number of days between applied date and current date
+                }
+                sendNotification(application.email, data);
             })
         }).catch(err => {
             console.error(err);

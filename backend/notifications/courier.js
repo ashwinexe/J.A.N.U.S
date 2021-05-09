@@ -1,6 +1,6 @@
 const { CourierClient }  =require("@trycourier/courier");
 
-const sendNotification = async (email) => {
+const sendNotification = async (email, data) => {
 
     const courier = CourierClient({ authorizationToken: process.env.COURIERKEY });
 
@@ -11,8 +11,7 @@ const sendNotification = async (email) => {
         profile: {
             email: email
         },
-        data: {
-        },
+        data: data,
         override: {
         },
     });
