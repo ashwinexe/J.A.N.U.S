@@ -71,14 +71,19 @@ request (options , (error, resp, html)=> {
 		document.getElementById("job-location").value = jobLocation;
 
 		document.getElementById("saveApplication").addEventListener("click", () => {
-			saveToDatabase({
-				title: jobTitle,
-				company: companyName,
-				location: jobLocation,
-				link: url, 
-				status: 'Applied',
-				email: localStorage.getItem("janus-email"),
-			});
+			if(!localStorage.getItem("janus-email")){
+				alert("Please add your email");
+				show_settings();
+			} else {
+				saveToDatabase({
+					title: jobTitle,
+					company: companyName,
+					location: jobLocation,
+					link: url, 
+					status: 'Applied',
+					email: localStorage.getItem("janus-email"),
+				});
+			}
 		});
 		
 
