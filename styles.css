@@ -1,9 +1,18 @@
-    h1 {
-        font-family: 'Menlo', monospace;
-        font-size:22px;
+     body {
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 14px;
+        margin: 0;
+        min-height: 180px;
+        padding: 0;
+        width: 384px;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
         font-weight: 400;
         margin: 0;
-        color: #2f5876
+        color: #FFF;
     }
 
     a:link, a:visited {
@@ -13,18 +22,18 @@
     }
 
     img {
-        width: 30px;
-
+        width: 20px;
     }
 
     .modal-header {
+        display: flex;
+        justify-content: space-around;
         align-items: center;
-        border-bottom: 0.5px solid #dadada;
-        margin-left: 50px;
+        background-color: #11224D;
+        padding: 0;
     }
 
     .modal-content {
-        padding:0 22px;
         align-items: center;
     }
 
