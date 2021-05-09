@@ -30,7 +30,7 @@ if (domain.toLowerCase() === "indeed") {
 		const $ = cheerio.load(html);
 
 		const title = $('.jobsearch-JobInfoHeader-title');
-		alert(title.html());
+		// alert(title.html());
 
 		let other = [];
 		$('.jobsearch-JobInfoHeader-subtitle div').each((i, el) => {
@@ -38,7 +38,28 @@ if (domain.toLowerCase() === "indeed") {
 		});
 		const company = other[1];
 		const location = other[other.length - 1];
-		console.log(company, location);
+		// alert(company);
+		// alert(location);
+		show_preview();
+		document.getElementById("job-title").value = title.html();
+		document.getElementById("company-name").value = company;
+		document.getElementById("job-location").value = location;
+
+		document.getElementById("saveApplication").addEventListener("click", () => {
+			if(!localStorage.getItem("janus-email")){
+				alert("Please add your email");
+				show_settings();
+			} else {
+				saveToDatabase({
+					title: title.html(),
+					company: company,
+					location: location,
+					link: url,
+					status: 'Applied',
+					email: localStorage.getItem("janus-email"),
+				});
+			}
+		});
 	}
 
 	else {
