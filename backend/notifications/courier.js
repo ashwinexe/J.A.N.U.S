@@ -2,7 +2,7 @@ const { CourierClient }  =require("@trycourier/courier");
 
 const sendNotification = async (email) => {
 
-    const courier = CourierClient({ authorizationToken: "pk_prod_9D654A3KMX42ABQX2SSP5ZTGTW43" });
+    const courier = CourierClient({ authorizationToken: process.env.COURIERKEY });
 
     // Example: send a message supporting email & SMS
     const { messageId } = await courier.send({
