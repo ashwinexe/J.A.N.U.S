@@ -2,7 +2,7 @@ var a;
 
 function show_settings() {
     if(a==1){
-        document.getElementById("settings_page").style.display="inline";
+        document.getElementById("settings_page").style.display="block";
         document.getElementById("index").style.display="none";
         return a =0;
     }

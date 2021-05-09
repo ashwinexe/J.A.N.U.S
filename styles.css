@@ -57,31 +57,23 @@
          opacity: 0.4;
      }
 
-     .flex-container {
-         display: flex;
-         justify-content: space-between;
-     }
-
-     .flex .fa {
-         font-size: 40px;
-         color: #2f5876;
-     }
-
      .button {
          display: flex;
-         justify-content: center;
+         flex-direction: column;
+         margin: 15px;
          padding: 10px;
      }
 
      .settings_page {
-         display: none;
+         display: block;
          padding: 10px;
-         color: darkblue;
+         background-color: darkblue;
+         color: white;
          width: 385px;
          /* height: 200px; */
      }
 
-     .row {
+     .custom_row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -89,9 +81,13 @@
         flex: 1;
         padding: 15px;
     }
-    .column {
+    .custom_column {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
         flex: 1;
+    }
+
+    .info {
+        width: 150px;
     }

@@ -33,10 +33,21 @@
     </div>
     
     <!-- settings page -->
-    <div class="row settings_page" id="settings_page">
-        <button class="btn btn-outline-secondary column"><i class="fa fa-arrow-left"></i></button>
-        <h3 class="column">Settings</h3>
-        <div class="row"></div>
+    <div class="settings_page" style="" id="settings_page">
+        <div class="row">
+            <button class="btn btn-outline-secondary custom_column" style="width: 10px;"><i class="fa fa-arrow-left"></i></button>
+            <div class="custom_column" style="flex-grow:5;">Settings</div>
+        </div>
+
+        <div class="custom_row">My Roles</div>
+        <div class="custom_row"><input type="text" placeholder="Software Engineer"></div>
+        <div class="custom_row">E-mail</div>
+        <div class="custom_row"><input type="text" placeholder="abc@gmail.com"></div>
+        <div class="custom_row">Notification Frequency</div>
+        <div class="custom_row"><input type="radio" id="weekly" value="weekly" style="margin-right: 20px; margin: 5px;"><label for="weekly">weekly</label></div>
+        <div class="custom_row"><input type="radio" id="weekly" value="weekly" style="margin-right: 20px; margin: 5px;"><label for="fortnightly">fortnightly</label></div>
+        <div class="custom_row"><input type="radio" id="weekly" value="weekly" style="margin-right: 20px; margin: 5px;"><label for="monthly">monthly</label></div>
+        
     </div>
 
     <!-- index page -->
