@@ -80,8 +80,12 @@
          color: white;
          width: 385px;
          /* height: 200px; */
+        }
+        
+        .data_preview {
+            display: block;
+            padding: 10px;
      }
-
      .custom_row {
         display: flex;
         flex-direction: row;
@@ -103,4 +107,14 @@
     
     .form-check {
         margin-left: 10px;
+    }
+
+    .custom_box {
+        display: flex;
+        background-color:#dadada;
+        padding: 10px;
+        width: 300px;
+        margin-left: 10px;
+        border: 1px solid gray;
+        align-items: center;
     }

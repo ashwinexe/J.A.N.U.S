@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
 <body>
+  <!-- header -->
     <div class="modal-header">
             <h2 class="logo">
                 <img src="images/logo.png" alt="logo-icon" class="logo-icon">Janus
@@ -50,6 +51,22 @@
             </label>
           </div>
     </div>
+<!-- scraped data -->
+<section class="data_preview" id="data_preview" style="display: none;" >
+<div class="custom_row" style="justify-content: center; font-weight: 1000;">Here's What we gathered</div>
+<div class="custom_row" style="padding-left: 10px;">Job Title</div>
+<div class="custom_box">Software  Engineer</div>
+
+<div class="custom_row" style="padding-left: 10px;">Company</div>
+<div class="custom_box">ABC</div>
+
+<div class="custom_row" style="padding-left: 10px;">Location</div>
+<div class="custom_box">Cupertino</div>
+<div class="button">
+  <button type="button" class="btn btn-outline-info" id="submit">Save Application</button>
+</div>
+
+</section>
 
     <!-- index page -->
 <section id="index">
@@ -58,11 +75,11 @@
 </div>
 
     <div class="button">
-        <button type="button" class="btn btn-outline-info">View Applications</button>
+        <button type="button" class="btn btn-outline-info" id="view">View Applications</button>
     </div>
 
     <div class="button">
-    <button type="button" class="btn btn-outline-success" id= "tracker">Track Application</button>
+    <button class="btn btn-outline-success" id= "track">Track Application</button>
 </div>
 </section>
 
