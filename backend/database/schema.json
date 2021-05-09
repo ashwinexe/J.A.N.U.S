@@ -1,0 +1,32 @@
+{
+    "name": "applications",
+    "columns": {
+        "id": {
+            "primary": true,
+            "type": "int",
+            "generated": true
+        },
+        "title": {
+            "type": "varchar"
+        },
+        "company": {
+            "type": "varchar"
+        },
+        "location": {
+            "type": "varchar",
+            "nullable": true
+        },
+        "link": {
+            "type": "varchar"
+        },
+        "status": {
+            "type": "varchar"
+        },
+        "email": {
+            "type": "varchar"
+        },
+        "creation_date": {
+            "type": "date"
+        }
+    }
+}
