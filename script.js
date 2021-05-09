@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('cog').addEventListener("click", show_settings);
     document.getElementById('back').addEventListener("click", hide_settings);
-    document.getElementById('track').addEventListener("click", show_preview);
+    document.getElementById('tracker').addEventListener("click", show_preview);
+    document.getElementById('saveApplication').addEventListener("click", hide_preview);
 })
 
 function show_settings() {
